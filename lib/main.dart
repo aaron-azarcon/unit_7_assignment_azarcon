@@ -18,6 +18,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
       // Create the routes here
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/about': (context) => About_Me(),
+      }
     );
   }
 }

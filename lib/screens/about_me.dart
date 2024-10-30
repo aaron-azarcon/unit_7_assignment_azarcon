@@ -19,7 +19,38 @@ class _About_MeState extends State<About_Me> {
       length: 2,
       child: Scaffold(
 
-      ),
+        appBar: AppBar(
+          iconTheme: const IconThemeData(
+              color: Colors.white
+          ),
+          backgroundColor: const Color(0xFF082851),
+          title: const Text(
+            'About Me',
+          style: TextStyle(
+              color: Colors.white,
+          )
+        ),
+
+        bottom: const TabBar(
+          labelColor: Color(0xFF11D9A6),
+          unselectedLabelColor: Colors.white,
+            tabs: [
+              Tab(
+                  icon: Icon(Icons.contacts),
+              ),
+              Tab(
+                  icon: Icon(Icons.notes)
+              )
+            ],
+          ),
+        ),
+        body: const TabBarView(
+            children: [
+              TabWidget1(),
+              TabWidget2()
+            ]
+        )
+      )
     );
   }
 }
